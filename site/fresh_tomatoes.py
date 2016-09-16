@@ -11,10 +11,14 @@ main_page_head = '''
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
     <!-- Bootstrap 3 -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" 
+        href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" 
+        href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script 
+        src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js">
+        </script>
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
@@ -92,7 +96,8 @@ main_page_content = '''
     <div class="modal" id="trailer">
       <div class="modal-dialog">
         <div class="modal-content">
-          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+          <a href="#" 
+            class="hanging-close" data-dismiss="modal" aria-hidden="true">
             <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
           </a>
           <div class="scale-media" id="trailer-video-container">
@@ -105,7 +110,8 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Dirkiboy's favorite Movie Trailers</a>
+            <a class="navbar-brand" 
+                href="#">Dirkiboy's favorite Movie Trailers</a>
           </div>
         </div>
       </div>
@@ -120,7 +126,9 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+<div class="col-md-6 col-lg-4 movie-tile text-center" 
+        data-trailer-youtube-id="{trailer_youtube_id}" 
+        data-toggle="modal" data-target="#trailer">  
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
 </div>
@@ -128,6 +136,8 @@ movie_tile_content = '''
 
 
 def create_movie_tiles_content(movies):
+    """Create the content of the website."""
+
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
@@ -149,6 +159,8 @@ def create_movie_tiles_content(movies):
 
 
 def open_movies_page(movies):
+    """Create and open the website in the browser."""
+
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
@@ -163,5 +175,3 @@ def open_movies_page(movies):
     # open the output file in the browser (in a new tab, if possible)
     url = os.path.abspath(output_file.name)
     webbrowser.open('file://' + url, new=2)
-
-print "check"

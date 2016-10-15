@@ -2,10 +2,10 @@
 This was my first project in the **Udacity Full Stack Web Developer Nanodegree**. It contains server-side code written in Python to store a list of my favorite movies, including box art imagery and a movie trailer URL. 
 You can see the result [here](https://goo.gl/ojxhWK). 
 
-## More Information
-Python installed on your computer.
-
 ## How to run it?
+Simply click [here](https://goo.gl/ojxhWK).
+
+If you want to run the program on your computer, you need Python installed on your computer.
 Download the project, unzip the folder and run `entertainment_center.py` in your favorite Python Console. This creates 
 `fresh_tomatoes.html` which openes in your favorite webbrowser:
 
